@@ -46,7 +46,7 @@
         Error: [
             'constructor', 'name', 'message', 'toString'
         ],
-        // Add more prototypes as needed
+        // Add more prototypes
     };
 
     // Reference to base prototypes
@@ -86,6 +86,6 @@
         }
     }
 
-    // Execute the detection function
+    // Execute
     detectPrototypePollution();
 })();
