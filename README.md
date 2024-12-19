@@ -6,12 +6,12 @@ This script is designed to detect potential prototype pollution vulnerabilities 
 
 ## How to Use the Script
 
-### Step 1: Open the Developer Console
+### Open the Developer Console
 1. Open the website you want to test in your browser.
 2. Right-click anywhere on the page and select **Inspect** or press `Ctrl+Shift+I` (Windows/Linux) or `Cmd+Opt+I` (Mac).
 3. Navigate to the **Console** tab.
 
-### Step 2: Paste the Script
+### Paste the Script
 1. Copy the entire script from the provided code file.
 2. Paste it into the console and press `Enter`.
 
@@ -23,14 +23,14 @@ This script is designed to detect potential prototype pollution vulnerabilities 
   - **Source code stack trace** leading to the pollution.
   - **Confirmation if pollution is confirmed** with a confidence level.
 
-### Step 4: Trace Vulnerability Sources
+### Trace Vulnerability Sources
 - Review the stack trace to identify the exact location in the source code where the prototype pollution occurred.
 - Look for lines such as:
   ```
   fetchWithoutJwt @ fetch.js:66
   authorizedFetch @ fetch.js:126
   ```
-- Navigate to the respective files in the source code for further inspection.
+- You'll find the prototype within those scripts, more directly where the type is next to a log
 
 ### Step 5: Mitigation
 If prototype pollution is confirmed:
@@ -50,11 +50,11 @@ Details: {
 ```
 
 ## Notes
-- This tool is for educational and testing purposes only. Use it responsibly and ensure proper authorization when testing third-party applications.
-- The script will not modify any application data; it only logs potential vulnerabilities to the console.
+- Use responsibly
+- It only logs potential vulnerabilities to the console.
 
 ## Troubleshooting
 - If no issues are detected but you suspect vulnerabilities, ensure the script is pasted correctly and refresh the page before re-running.
-- If the application uses minified or obfuscated JavaScript, consider loading the unminified source code for better results.
+- Tested via Chrome, Chromium, and Firefox
 
 Happy Testing!
